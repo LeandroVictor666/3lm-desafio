@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../{{css_base}}">
+    <link rel="stylesheet" href="../{{assets_dir}}css/style.css">
+    <script src="../{{assets_dir}}js/app.js"></script>
+    <title>3LM</title>
+</head>
+<body>
+    {% include 'layout/header.html' %}
+    <main class="confirm-delete-role-main-container">
+        <class class="confirm-delete-container">
+            <p>Você realmente deseja apagar o cargo?</p>
+            <p>Cargo.ID: {{role_data.id}}</p>
+            <p>Cargo.Nome: {{role_data.name}}</p>
+            <p>Cargo.Descrição: {{role_data.description}}</p>
+            <button id="confirm-delete-btn">Sim</button>
+            <a href="/"><button>Não</button></a>
+        </class>
+    </main>
+</body>
+</html>

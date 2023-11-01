@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="3lm_2.0" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a565dfdd-98c5-4602-af01-784472102411">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="3lmDb"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8081/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/3LMReports/3lm_2.0_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/3LMReports/3lm_2.0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT employees.*,
+	roles.id,
+	roles.name
+FROM employees
+	INNER JOIN roles ON 
+	 employees.role_id = roles.id]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employees"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employees"/>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employees"/>
+	</field>
+	<field name="role_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="role_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="role_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employees"/>
+	</field>
+	<field name="birthday" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="birthday"/>
+		<property name="com.jaspersoft.studio.field.label" value="birthday"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employees"/>
+	</field>
+	<field name="salary" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="salary"/>
+		<property name="com.jaspersoft.studio.field.label" value="salary"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employees"/>
+	</field>
+	<field name="COLUMN_7" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="roles"/>
+	</field>
+	<field name="COLUMN_8" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="roles"/>
+	</field>
+	<group name="COLUMN_7">
+		<groupExpression><![CDATA[$F{COLUMN_7}]]></groupExpression>
+	</group>
+	<group name="COLUMN_8">
+		<groupExpression><![CDATA[$F{COLUMN_8}]]></groupExpression>
+	</group>
+	<group name="Cargo: ">
+		<groupExpression><![CDATA[$F{COLUMN_8}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<textField>
+					<reportElement x="0" y="0" width="480" height="50" uuid="40b53628-9816-423c-8dc6-18ef59647c21"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{COLUMN_8}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="30" width="200" height="21" uuid="a5942bf1-f2d5-4943-b4cf-e17c31bbeaeb"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Relatorio De Funcionario]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="40" height="28" uuid="4902a305-3d3f-4e41-b3ed-027694a6e453">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc0a9b49-bf56-4c1d-ba9d-1688bc094deb"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="0" width="70" height="28" uuid="436dc357-02f8-4e8b-8b0a-70572c56d0f9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="672c015c-70fd-4640-9fce-1bfd914220ea"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="110" height="28" uuid="f2eb550b-1c17-45c0-b5e3-6fc9d082fc28">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5309f752-dfaa-41de-a53f-6d574e29ba08"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[last_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="160" height="28" uuid="5e55c692-ce0d-48d4-b743-84fc98caac21">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6031bfc4-3c2d-410b-8794-28be6b7f2e9f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[birthday]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="90" height="28" uuid="06ebd423-87c0-41ad-b388-6632dddc5852">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cba554f0-9ca8-4c2f-9826-6d74ad788967"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[salary]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="40" height="32" uuid="63478133-e195-4dff-ad3e-99b569f9971e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc0a9b49-bf56-4c1d-ba9d-1688bc094deb"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ID: "+ $F{id} ]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="0" width="70" height="32" uuid="a34a7507-6654-4f61-b065-1e38a29caa94">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="672c015c-70fd-4640-9fce-1bfd914220ea"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nome: "+$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="0" width="110" height="32" uuid="9a252981-cc14-42a9-b240-80f2327263b8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5309f752-dfaa-41de-a53f-6d574e29ba08"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Sobrenome: "+$F{last_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="160" height="32" uuid="eac8b683-16d9-406f-a583-ad1b4a881b97">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6031bfc4-3c2d-410b-8794-28be6b7f2e9f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Data.Nascimento: "+$F{birthday}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="90" height="32" uuid="bd112e79-f73d-4b96-b4ac-81df868d01df">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cba554f0-9ca8-4c2f-9826-6d74ad788967"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Salario: "+$F{salary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

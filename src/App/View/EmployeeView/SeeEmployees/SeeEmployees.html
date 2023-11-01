@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{css_base}}">
+    <link rel="stylesheet" href="{{assets_dir}}css/style.css">
+    <title>3lm</title>
+</head>
+<body>
+    {% include 'layout/header.html' %}
+    <main class="see-employees-main-container">
+        <div class="see-employees-container">
+            <table class="see-employees-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Cargo</th>
+                        <th>Data De Nascimento</th>
+                        <th>Salario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for employee in employees_data %}
+                        <div class="employee-information">
+                            <tr>
+                                <td>{{employee.id}}</td>
+                                <td>{{employee.name}}</td>
+                                <td>{{employee.last_name}}</td>
+                                <td>{{employee.role_id}}</td>
+                                <td>{{employee.birthday}}</td>
+                                <td>{{employee.salary}}</td>
+                                <td><a href="editemployee/{{employee.id}}"><button>Editar</button></a></td>
+                                <td><a href="deleteemployee/{{employee.id}}"><button>Remover</button></a></td>
+                            </tr>
+                        </div>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

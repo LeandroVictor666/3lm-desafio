@@ -1,0 +1,36 @@
+.edit-employee-main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.edit-employee-main-container .edit-employee-form{
+    background-color: white;
+    padding: 32px;
+}
+
+.edit-employee-main-container .edit-employee-form p{
+    margin: 0px;
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+.box-input{
+    margin-top: 24px;
+}
+
+.edit-employee-main-container .edit-employee-form select{
+    width: 80%;
+    padding: 2px;
+}
+
+.edit-employee-main-container .edit-employee-form input[type="date"] {
+    width: 80%; 
+    padding: 1px;
+}
+  
+#submit-btn{
+    margin-top: 16px;
+    padding: 4px;
+    width: 100%;
+}

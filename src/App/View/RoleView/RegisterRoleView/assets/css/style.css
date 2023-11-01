@@ -1,0 +1,40 @@
+.new-role-container{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.new-role-container .new-role-form{
+    background-color: white;
+    border-radius: 6px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontal-line{
+    background-color: rgb(54, 54, 54);
+    width: 100%;
+    height: 1px;
+    margin-bottom: 16px;
+}
+
+.input-box{
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box p{
+    margin: 0px;
+    margin-bottom: 4px;
+}
+
+#register-new-role-id{
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid black
+}

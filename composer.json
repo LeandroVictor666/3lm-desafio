@@ -1,0 +1,18 @@
+{
+    "name": "leandro-victor-666/3lm",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/",
+            "Support\\": "src/App/Support/",
+            "Controllers\\": "src/App/Controller/",
+            "Models\\": "src/App/Models/",
+            "Core\\": "src/Core/",
+            "Globals\\": "src/Globals/"
+        }
+    },
+    "require": {
+        "pecee/simple-router": "5.3.0.5",
+        "twig/twig": "^3.7",
+        "geekcom/phpjasper": "^3.1"
+    }
+}

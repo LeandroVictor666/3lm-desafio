@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../{{assets_dir}}css/style.css">
+    <link rel="stylesheet" href="../{{css_base}}">
+    <script src="../{{assets_dir}}js/app.js"></script>
+    <title>3lm</title>
+</head>
+<body>
+    {% include 'layout/header.html' %}
+    <main class="edit-employee-main-container">
+        <form class="edit-employee-form" id="edit-employee-form-id">
+            <p>ID.Funcionario: {{employee_data.id}}</p>
+            <div class="box-input">
+                <p>Nome: {{employee_data.name}}</p>
+                <input type="text" id="name-input" value="{{employee_data.name}}" placeholder="Insira o novo nome do funcionario">
+            </div>
+            <div class="box-input">
+                <p>Sobrenome: {{employee_data.last_name}}</p>
+                <input type="text" id="lastname-input" value="{{employee_data.last_name}}" placeholder="Insira o novo sobrenome do funcionario">
+            </div>
+            <div class="box-input">
+                <p>Cargo: {{employee_role_data.name}}</p>
+                <select id="role-input" name="{{employee_data.role_id}}">
+                    {% for role in all_roles %}
+                    {% if role.id == employee_data.role_id %}
+                        <option selected="selected" value="{{role.id}}">{{role.name}}</option>
+                    {% else %}
+                    <option value="{{role.id}}">{{role.name}}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="box-input">
+                <p>Data.Nascimento: {{employee_data.birthday}}</p>
+                <input id="date-input" value="{{employee_data.birthday}}" type="date">
+            </div>
+            <div class="box-input">
+                <p>Salario: {{employee_data.salary}}R$</p>
+                <input id="salary-input" type="number" value="{{employee_data.salary}}">
+            </div>
+            <input type="submit" id="submit-btn" value="Confirmar">
+        </div>
+    </main>
+</body>
+</html>

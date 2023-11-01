@@ -1,0 +1,15 @@
+.see-employees-main-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+
+}
+
+.see-employees-main-container .see-employees-container{
+    background-color: white;
+    padding: 16px;
+}
+
+.see-employees-main-container .see-employees-container .see-employees-table{
+    text-align: center;
+}

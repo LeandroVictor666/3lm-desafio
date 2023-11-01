@@ -1,0 +1,23 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #C0C0C0;
+}
+
+.app-header{
+    background-color: rgb(233, 233, 233);
+    height: 50px;
+    border-radius: 8px;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-header a{
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+    margin-left: 16px;
+}

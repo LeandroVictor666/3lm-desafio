@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{assets_dir}}/css/style.css">
+    <link rel="stylesheet" href="{{style_base}}">
+    <title>3lm</title>
+</head>
+<body>
+    {% include 'layout/header.html' %}
+    <main class="reports-main-container">
+        {% for employee in birthdayEmployees %}
+        <div class="congratulations-container">
+            <p><strong>Parabéns {{employee.name}} {{employee.last_name}} por mais um ano de vida, Tenhas um dia repleto de felicidades.</strong></p>
+        </div>
+        {% endfor %}
+        <div class="reports-container">
+            <iframe src="{{report_frame}}" id="report-employee-iframe"></iframe>
+        </div>
+    </main>
+    
+</body>
+</html>

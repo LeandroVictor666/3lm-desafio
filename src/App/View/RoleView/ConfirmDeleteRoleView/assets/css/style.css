@@ -1,0 +1,25 @@
+*{
+    transition: 0.6s;
+}
+
+.confirm-delete-role-main-container {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-delete-role-main-container .confirm-delete-container{
+    background-color: white;
+    padding: 16px;
+    text-align: center;
+}
+
+.confirm-delete-role-main-container .confirm-delete-container button{
+    width: 40%;
+    margin-top: 16px;
+}
+.confirm-delete-role-main-container .confirm-delete-container button:hover{
+    background-color: rgb(219, 219, 219);
+    outline: none;
+}

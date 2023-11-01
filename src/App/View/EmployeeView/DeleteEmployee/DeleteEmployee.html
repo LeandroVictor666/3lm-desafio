@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../{{css_base}}">
+    <link rel="stylesheet" href="../{{assets_dir}}css/style.css">
+    <script src="../{{assets_dir}}js/app.js"></script>
+    <title>3lm</title>
+</head>
+<body>
+    {% include 'layout/header.html' %}
+    <main class="delete-employee-main-container">
+        <div class="delete-employee-container">
+            <p>ID: {{employee_data.id}}</p>
+            <p>Nome: {{employee_data.name}}</p>
+            <p>Sobrenome: {{employee_data.last_name}}</p>
+            <p>Cargo: {{employee_role_data.name}}</p>
+            <p>Data de nascimento: {{employee_data.birthday}}</p>
+            <p>Salario: {{employee_data.salary}}R$</p>
+            <p id="confirmation-delete-label">Voce realmente deseja <strong>DELETAR</strong> o funcionario {{employee_data.name}} {{employee_data.last_name}}?</p>
+            <small><strong>LEMBRE-SE!</strong> A exclusão de <strong>QUALQUER DADO</strong> do banco de dados é <strong>PERMANENTE!</strong></small>
+            <br><br>
+            <button id="delete-employee-btn">Sim</button>
+            <a href="/"><button>Não</button></a>
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../{{css_base}}">
+    <link rel="stylesheet" href="{{assets_dir}}css/styles.css">
+    <title>3LM</title>
+</head>
+<body>
+    {% include 'layout/header.html' %}
+    <div class="see-roles-main-container">
+        <div class="see-roles-container">
+            <header>
+                <p>Cargos Existentes</p>
+            </header>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+            <tbody>
+                {% for role in roles_data %}
+                <div class="role-information">
+                    <tr>
+                        <td>{{ role.id }}</td>
+                        <td>{{ role.name }}</td>
+                        <td>{{ role.description }}</td>
+                        <td><a href="/updaterole/{{role.id}}" style="text-decoration: none;color: black;"><button>Editar</button></a></td>
+                        <td><a href="/confirmdeleterole/{{role.id}}"><button>Remover</button></a></td>
+                    </tr>
+                </div>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    </div>
+</body>
+</html>

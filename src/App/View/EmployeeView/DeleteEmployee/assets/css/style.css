@@ -1,0 +1,31 @@
+.delete-employee-main-container{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.delete-employee-main-container .delete-employee-container{
+    background-color: white;
+    width: 30%;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid rgb(172, 172, 172);
+    text-align: center;
+
+}
+.delete-employee-main-container .delete-employee-container button{
+    width: 60%;
+    margin-bottom: 16px;
+}
+
+
+#confirmation-delete-label{
+    margin: 0px;
+    margin-bottom: 8px;
+}
+
+
+small{
+    margin-bottom: 99px;
+}

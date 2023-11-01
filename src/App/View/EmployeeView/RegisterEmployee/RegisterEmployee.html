@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3LM Informática</title>
+    <link rel="stylesheet" href="{{assets_dir}}css/style.css?v={{random(1, 9999999)}}">
+    <link rel="stylesheet" href="{{css_base}}">
+    <script src="{{assets_dir}}js/app.js?v={{random(1, 9999999)}}"></script>
+</head>
+<body>
+    {% include 'layout/header.html' %}
+    <main class="main-container">
+        <div class="main-box-card">
+            <header>
+                <p>Cadastrar Novo Funcionário!</p>
+            </header>
+
+            <div class="horizontal-line"></div>
+            <form class="new-employeer-form" id="new-eployeer-form-id">
+                <div class="input-box">
+                    <p>Nome</p>
+                    <input type="text" id="name-value" autocomplete="off">
+                </div>
+                <div class="input-box">
+                    <p>Sobrenome</p>
+                    <input type="text" id="lastname-value" autocomplete="off">
+                </div>
+                <div class="input-box">
+                    <p>Cargo</p>
+                    <select id="selected-role">
+                        {% for role in roles_data %}
+                        <option value="{{role.id}}">{{role.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="input-box">
+                    <p>Data De Nascimento</p>
+                    <input type="date" id="birthday-value" style="width: 100%;">
+                </div>
+                <div class="input-box">
+                    <p>Salário</p>
+                    <input type="number" id="salary-value">
+                </div>
+                <button>Cadastrar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

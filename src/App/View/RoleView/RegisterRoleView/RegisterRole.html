@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../{{css_base}}">
+    <link rel="stylesheet" href="{{assets_dir}}css/style.css">
+    <script src="{{assets_dir}}js/app.js"></script>
+    <title>3LM</title>
+</head>
+<body>
+    {% include 'layout/header.html' %}
+    <main>
+        <div class="new-role-container">
+            <form class="new-role-form" id="new-role-form-id">
+                <header>
+                    <p>Adicionar Novo Cargo</p>
+                </header>
+                <div class="horizontal-line"></div>
+                <div class="input-box">
+                    <p>Nome Do Cargo</p>
+                    <input type="text" id="role-name-input" autocomplete="off">
+                </div>
+                <div class="input-box">
+                    <p>Descrição Do Cargo</p>
+                    <input type="text" id="role-description-input" autocomplete="off">
+                </div>
+                <button id="register-new-role-id">Registrar Novo Cargo</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
